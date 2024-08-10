@@ -1,0 +1,13 @@
+#include "pathfinder.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 0 NiceNanoV2 P006
+        , <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 1 NiceNanoV2 P008
+        , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 2 NiceNanoV2 P017
+        , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 3 NiceNanoV2 P020
+        , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 4 NiceNanoV2 P022
+        , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 5 NiceNanoV2 P024
+        , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // COL 6 NiceNanoV2 P100
+        ;
+};

@@ -1,0 +1,5 @@
+config SHIELD_PATHFINDER_LEFT
+    def_bool $(shields_list_contains,pathfinder_left)
+
+config SHIELD_PATHFINDER_RIGHT
+    def_bool $(shields_list_contains,pathfinder_right)
