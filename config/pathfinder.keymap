@@ -23,11 +23,17 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  | LBKT  |        |  RBKT |  N  |  M   |  ,  |  .  |  /  | RCTRL|
 //                        | GUI | LCTRL | ENT RSE |               | SPC LWR | BSPC  | ALT |
                         bindings = <
-   &kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                        &kp N6 &kp N7  &kp N8    &kp N9  &kp N0   &kp MINUS
-   &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T  &kp PG_UP    &kp HOME  &kp Y  &kp U   &kp I     &kp O   &kp P    &kp BSLH
-   &kp LALT &kp A  &kp S  &kp D  &kp F  &kp G  &kp PG_DN    &kp END   &kp H  &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LBKT     &kp RBKT  &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-                              &kp LGUI &kp LCTRL &lt 2 RET           &lt 1 SPACE &kp BSPC &kp RALT
+// |----------|----------|----------|----------|----------|----------|                         |----------|----------|----------|----------|----------|----------|
+     &kp ESC    &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6      &kp N7    &kp N8     &kp N9     &kp N0     &kp MINUS
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+     &kp TAB     &kp Q     &kp W       &kp E      &kp R      &kp T     &kp PG_UP      &kp HOME    &kp Y       &kp U      &kp I     &kp O       &kp P    &kp BSLH
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|   
+     &kp LALT    &kp A      &kp S      &kp D      &kp F      &kp G    &kp PG_DN       &kp END     &kp H       &kp J     &kp K       &kp L    &kp SEMI   &kp SQT
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B     &kp LBKT       &kp RBKT    &kp N       &kp M     &kp COMMA &kp DOT    &kp FSLH   &kp RCTRL
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+                                                &kp LGUI    &kp LCTRL  &lt 2 RET    &lt 1 SPACE  &kp BSPC   &kp RALT
+//                                             |----------|----------|----------|   |----------|----------|----------| 
                         >;
                 };
                 lower_layer {
@@ -39,11 +45,17 @@
 // |      |     |     |     |     |     |     |          |     |     |     |     |     |     |      |
 //                        |     |     |     |              |     |     |     |
                         bindings = <
-   &kp F1  &kp F2       &kp F3       &kp F4 &kp F5 &kp F6                                       &kp F7  &kp F8   &kp F9   &kp F10   &kp F11   &kp F12
-   &trans  &trans       &trans       &trans &trans &trans &bt BT_CLR_ALL                 &trans &trans  &trans   &kp UP   &trans    &trans &trans
-   &trans  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_CLR   &trans &trans  &kp LEFT &kp DOWN &kp RIGHT &trans    &trans
-   &trans  &trans       &trans       &trans &trans &trans &trans                         &trans &trans  &trans   &trans   &trans    &trans    &trans
-                                        &trans &trans  &trans                              &trans &trans &trans
+// |----------|--------------|--------------|--------------|--------------|--------------|                          |----------|----------|----------|----------|----------|----------|                        
+      &kp F1     &kp F2     &kp F3    &kp F4     &kp F5     &kp F6                                                     &kp F7    &kp F8     &kp F9      &kp F10    &kp F11   &kp F12
+// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
+      &trans     &trans     &trans    &trans     &trans     &trans     &bt BT_CLR_ALL                      &trans      &trans     &trans     &kp UP     &trans     &trans    &trans
+// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
+     &trans    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 5  &bt BT_CLR       &trans      &trans    &kp LEFT   &kp DOWN   &kp RIGHT   &trans    &trans
+// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|  
+      &trans     &trans         &trans          &trans         &trans         &trans        &trans         &trans      &trans     &trans    &trans     &trans      &trans    &trans
+// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
+                                                               &trans         &trans        &trans         &trans      &trans     &trans
+//                                                         |--------------|--------------|----------|    |----------|----------|----------|                                         
                         >;
                 };
 
@@ -55,11 +67,17 @@
 // |      |     |     |     |     |     |     |          |     |     | KP 1| KP 2| KP 3| KPEN|      |
 //                        |     |     |     |              |     |     |     |
                         bindings = <
-   &kp GRAVE &trans     &trans   &trans     &trans &trans                             &trans &trans    &kp KP_SLASH &kp KP_MULTIPLY &kp KP_MINUS &kp DEL
-   &trans    &trans     &trans   &trans     &trans &trans &trans               &trans &trans &kp KP_N7 &kp KP_N8    &kp KP_N9       &kp KP_PLUS  &trans
-   &trans    &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &trans   &trans &trans &kp KP_N4 &kp KP_N5    &kp KP_N6       &kp KP_ENTER &trans
-   &trans    &trans     &trans   &trans     &trans &trans &trans               &trans &trans &kp KP_N1 &kp KP_N2    &kp KP_N3       &kp KP_ENTER &trans
-                                         &trans &trans  &trans              &trans &trans &trans
+// |----------|----------|----------|----------|----------|----------|                         |----------|----------|----------|----------|----------|----------|   
+     &kp GRAVE  &trans     &trans     &trans     &trans     &trans                               &trans      &trans  &kp KP_SLASH &kp KP_MULTIPLY  &kp KP_MINUS &kp DEL
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+     &trans     &trans     &trans     &trans     &trans     &trans     &trans         &trans     &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS  &trans
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+     &trans    &kp C_PREV &kp C_PP   &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &trans      &trans     &trans     &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_ENTER &trans
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+     &trans     &trans     &trans     &trans     &trans     &trans     &trans          &trans    &trans &kp KP_N1      &kp KP_N2  &kp KP_N3  &kp KP_ENTER &trans
+// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
+                                                 &trans     &trans     &trans          &trans    &trans     &trans
+//                                             |----------|----------|----------|   |----------|----------|----------|                       
                         >;
                 };
         };
