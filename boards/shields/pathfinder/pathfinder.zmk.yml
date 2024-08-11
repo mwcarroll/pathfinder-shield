@@ -1,0 +1,11 @@
+file_format: "1"
+id: pathfinder
+name: Pathfinder
+type: shield
+url: https://github.com/jstuplich/pathfinder-shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - pathfinder_left
+  - pathfinder_right
