@@ -5,97 +5,92 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
-&lt {
-        tapping-term-ms = <300>;
-};
+&lt { tapping-term-ms = <300>; };
 
 / {
     combos {
         compatible = "zmk,combos";
+
         combo_game {
             timeout-ms = <50>;
             key-positions = <0 5>;
-            bindings = <&tog 3>;
+            bindings = <&tog 0>;
         };
     };
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-
-                        bindings = <
-// |----------|----------|----------|----------|----------|----------|                         |----------|----------|----------|----------|----------|----------|
-     &kp GRAVE   &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6      &kp N7    &kp N8     &kp N9     &kp N0   &kp MINUS
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-     &kp TAB     &kp Q     &kp W       &kp E      &kp R      &kp T     &kp ESC       &kp CAPS    &kp Y       &kp U      &kp I     &kp O       &kp P    &kp BSLH
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|   
-     &kp LALT    &kp A      &kp S      &kp D      &kp F      &kp G    &kp EQUAL      &kp PSCRN    &kp H       &kp J     &kp K       &kp L    &kp SEMI   &kp SQT
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B     &kp LBKT       &kp RBKT    &kp N       &kp M     &kp COMMA &kp DOT    &kp FSLH   &kp RCTRL
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-                                                &kp LGUI    &kp LCTRL  &lt 2 RET    &lt 1 SPACE  &kp BSPC   &kp RALT
-//                                             |----------|----------|----------|   |----------|----------|----------| 
-                        >;
-                };
-                lower_layer {
-                
-                        bindings = <
-// LOWER LAYER (LT 1)
-// |----------|--------------|--------------|--------------|--------------|--------------|                          |----------|----------|----------|----------|----------|----------|                        
-      &kp F1     &kp F2           &kp F3        &kp F4         &kp F5         &kp F6                                    &kp F7    &kp F8     &kp F9    &kp F10    &kp F11    &kp F12
-// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
-      &trans     &trans          &trans         &trans         &trans       &trans     &bt BT_CLR_ALL       &trans   &kp PG_UP  &kp HOME   &kp UP    &kp END    &trans     &trans
-// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
-     &trans    &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 5  &bt BT_CLR       &trans    &kp PG_DN    &kp LEFT   &kp DOWN   &kp RIGHT   &trans    &trans
-// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|  
-      &trans     &trans         &trans          &trans         &trans         &trans        &trans         &trans      &trans     &trans    &trans     &trans      &trans    &trans
-// |----------|--------------|--------------|--------------|--------------|--------------|----------|    |----------|----------|----------|----------|----------|----------|----------|   
-                                                               &trans         &trans        &trans         &trans      &trans     &trans
-//                                                         |--------------|--------------|----------|    |----------|----------|----------|                                         
-                        >;
-                };
-
-                raise_layer {
-
-                        bindings = <
-// RAISE LAYER (LT 2)
-// |----------|----------|----------|----------|----------|----------|                         |----------|----------|------------|---------------|-------------|----------|   
-     &soft_off     &trans     &trans     &trans     &trans     &trans                             &trans  &kp KP_SLASH &kp KP_MULTIPLY  &kp KP_MINUS  &trans      &kp DEL
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|------------|---------------|-------------|----------|
-     &trans     &trans     &trans     &trans     &trans     &trans     &trans         &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9     &kp KP_PLUS      &trans       &trans
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|------------|---------------|-------------|----------|
-     &trans    &kp C_PREV &kp C_PP   &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &trans      &trans     &kp KP_N4  &kp KP_N5   &kp KP_N6   &kp KP_ENTER     &trans       &trans
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|------------|---------------|-------------|----------|
-     &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans          &trans    &kp KP_N1  &kp KP_N2   &kp KP_N3    &kp KP_ENTER    &trans        &trans
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|------------|---------------|-------------|----------|
-                                                 &trans     &trans     &trans         &kp N0    &kp KP_DOT  &trans
-//                                             |----------|----------|----------|   |----------|----------|----------|    
-
-                         >;
-                };
-
-                game_layer {
-
-                        bindings = <
-// GAME LAYER (LT 3)
-// |----------|----------|----------|----------|----------|----------|                         |----------|----------|----------|----------|----------|----------|
-     &kp GRAVE   &kp N1      &kp N2     &kp N3     &kp N4     &kp N5                               &kp N6      &kp N7    &kp N8     &kp N9     &kp N0   &kp MINUS
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-     &kp TAB     &kp Q     &kp W       &kp E      &kp R      &kp T     &kp ESC       &kp CAPS    &kp Y       &kp U      &kp I     &kp O       &kp P    &kp BSLH
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|   
-     &kp LALT    &kp A      &kp S      &kp D      &kp F      &kp G    &kp EQUAL      &kp PSCRN    &kp H       &kp J     &kp K       &kp L    &kp SEMI   &kp SQT
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-     &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B     &kp LBKT       &kp RBKT    &kp N       &kp M     &kp COMMA &kp DOT    &kp FSLH   &kp RCTRL
-// |----------|----------|----------|----------|----------|----------|----------|   |----------|----------|----------|----------|----------|----------|----------|
-                                                &kp CAPS    &kp LCTRL  &kp SPACE      &kp RET    &kp BSPC   &kp RALT
-//                                             |----------|----------|----------|   |----------|----------|----------| 
-                        >;
-                };
+    macros {
+        PriorityLeft: PriorityLeft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z) &kp N9 &kp N1>;
+            label = "PRIORITYLEFT";
         };
+
+        PriorityCenter: PriorityCenter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z) &kp N9 &kp N2>;
+            label = "PRIORITYCENTER";
+        };
+
+        PriorityRight: PriorityRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z) &kp N9 &kp N3>;
+            label = "PRIORITYRIGHT";
+        };
+
+        SplitLeft: SplitRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z) &kp N4 &kp N1>;
+            label = "SPLITRIGHT";
+        };
+
+        SplitRight: SplitRight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(Z) &kp N4 &kp N2>;
+            label = "SPLITRIGHT";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7    &kp N8  &kp N9     &kp N0   &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &kp ESC                 &kp CAPS   &kp Y     &kp U   &kp I      &kp O    &kp P      &kp BSLH
+&kp LALT   &kp A   &kp S   &kp D     &kp F      &kp G      &kp EQUAL               &kp PSCRN  &kp H     &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B      &kp LBKT                &kp RBKT   &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH   &kp LGUI
+                           &kp LGUI  &kp LCTRL  &lt 0 RET             &lt 0 SPACE  &kp BSPC   &kp RALT
+            >;
+        };
+
+        Macros {
+            bindings = <
+&trans  &PriorityLeft  &PriorityCenter  &PriorityRight  &SplitLeft  &SplitRight                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans           &trans          &trans      &trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans           &trans          &trans      &trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans         &trans           &trans          &trans      &trans       &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans          &trans      &trans               &trans  &trans  &trans
+            >;
+        };
+
+        FuncsArrows {
+            bindings = <
+&none   &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                &kp F6      &kp F7     &kp F8    &kp F9    &kp F10    &none
+&trans  &kp F11       &kp F12       &kp F13       &kp F14       &kp F15       &bt BT_CLR_ALL          &none       &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp PRINTSCREEN  &none
+&trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_CLR              &none       &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none            &none
+&trans  &none         &none         &none         &none         &none         &none                   &none       &none      &none     &none     &none      &none            &none
+                                    &trans        &trans        &trans                        &trans  &kp DELETE  &trans
+            >;
+        };
+    };
 };
