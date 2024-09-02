@@ -45,11 +45,11 @@
             label = "PRIORITYRIGHT";
         };
 
-        SplitLeft: SplitRight {
+        SplitLeft: SplitLeft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(Z) &kp N4 &kp N1>;
-            label = "SPLITRIGHT";
+            label = "SPLITLEFT";
         };
 
         SplitRight: SplitRight {
