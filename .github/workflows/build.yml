@@ -1,18 +1,28 @@
-on: [push, pull_request, workflow_dispatch]
+name: Release Build
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
 
 jobs:
-  build:
-    name: Build
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-  assets:
-    name: Upload Assets
+  release:
+    name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: write # release changes require contents write
+      contents: write
+      actions: write
     steps:
-      - uses: actions/checkout@v3
-      - name: Upload Release Asset
+      - name: Extract branch name
+        id: branch
+        shell: bash
+        run: echo "name=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+      - name: Build Firmware
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+      - name: Upload Release Artifacts
+        run: |
+          gh release create v1.2.3 release.tar.xz
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          gh release upload <release_tag> <a_file>
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        shell: bash
