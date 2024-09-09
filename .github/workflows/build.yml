@@ -3,16 +3,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      actions: write
-    steps:
-      - name: Upload Release Artifacts
-        run: |
-          gh release create v1.2.3 release.tar.xz
-        env:
-          GITHUB_TOKEN: ${{ github.TOKEN }}
-        shell: bash
