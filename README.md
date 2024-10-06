@@ -1,7 +1,7 @@
 ## [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 
-![image](https://github.com/user-attachments/assets/4b2e53f7-fe84-403c-b684-b4dfa275e6ca)
-![image](https://github.com/user-attachments/assets/31d8d529-c5b8-48ce-8fac-81102ae695aa)
-![image](https://github.com/user-attachments/assets/c8da5b96-4901-4d8e-9328-af23f287e460)
-![image](https://github.com/user-attachments/assets/867f5b48-48c9-4006-9609-fef26d0c9eb9)
-![image](https://github.com/user-attachments/assets/0290f99c-169d-4880-bfbc-aef5f4317cc6)
+![image](https://github.com/user-attachments/assets/b5ef20a2-45bc-472c-a4fc-80e640f1c69d)
+![image](https://github.com/user-attachments/assets/2726da21-4697-4642-9a57-2632accac95c)
+![image](https://github.com/user-attachments/assets/3c322619-12af-4574-933d-f28daa3aab95)
+![image](https://github.com/user-attachments/assets/192a3c85-7349-4d80-9551-4bfc42594298)
+![image](https://github.com/user-attachments/assets/61396ad6-e8a7-4dab-b957-cd36c4fefc32)
