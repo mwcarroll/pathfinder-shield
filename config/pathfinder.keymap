@@ -27,12 +27,7 @@
         PriorityLeft: PriorityLeft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(Z)>,
-                <&macro_wait_time 100>,
-                <&kp N9>,
-                <&macro_wait_time 100>,
-                <&kp N1>;
+            bindings = <&macro_wait_time 250>, <&kp LG(Z) &kp N9 &kp N1>;
 
             label = "PRIORITYLEFT";
         };
@@ -40,12 +35,7 @@
         PriorityCenter: PriorityCenter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(Z)>,
-                <&macro_wait_time 100>,
-                <&kp N9>,
-                <&macro_wait_time 100>,
-                <&kp N2>;
+            bindings = <&macro_wait_time 250>, <&kp LG(Z) &kp N9 &kp N2>;
 
             label = "PRIORITYCENTER";
         };
@@ -53,12 +43,7 @@
         PriorityRight: PriorityRight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(Z)>,
-                <&macro_wait_time 100>,
-                <&kp N9>,
-                <&macro_wait_time 100>,
-                <&kp N3>;
+            bindings = <&macro_wait_time 250>, <&kp LG(Z) &kp N9 &kp N3>;
 
             label = "PRIORITYRIGHT";
         };
@@ -66,12 +51,7 @@
         SplitLeft: SplitLeft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(Z)>,
-                <&macro_wait_time 100>,
-                <&kp N4>,
-                <&macro_wait_time 100>,
-                <&kp N1>;
+            bindings = <&macro_wait_time 250>, <&kp LG(Z) &kp N4 &kp N1>;
 
             label = "SPLITLEFT";
         };
@@ -79,12 +59,7 @@
         SplitRight: SplitRight {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(Z)>,
-                <&macro_wait_time 100>,
-                <&kp N4>,
-                <&macro_wait_time 100>,
-                <&kp N2>;
+            bindings = <&macro_wait_time 250>, <&kp LG(Z) &kp N4 &kp N2>;
 
             label = "SPLITRIGHT";
         };
