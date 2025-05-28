@@ -1,5 +1,7 @@
 # Pathfinder Personal Layout - Work
 
+## Last Keymap Change: `2025-05-23`
+
 ## [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 
 ### Layer 0
